@@ -22,7 +22,7 @@ jobs:
     - name: Install Dependencies
       run: |
         composer self-update --stable # Ensure composer is up-to-date
-        composer install --no-ansi --no-interaction --no-progress --prefer-dist
+        composer update --no-ansi --no-interaction --no-progress --prefer-dist
       env:
         COMPOSER_MEMORY_LIMIT: -1 # Increases memory limit to handle large dependencies
     - name: Generate key
