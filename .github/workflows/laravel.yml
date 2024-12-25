@@ -20,8 +20,7 @@ jobs:
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
-      run: |
-        composer self-update --stable # Ensure composer is up-to-date
+      run: 
         composer update --no-ansi --no-interaction --no-progress --prefer-dist
       env:
         COMPOSER_MEMORY_LIMIT: -1 # Increases memory limit to handle large dependencies
